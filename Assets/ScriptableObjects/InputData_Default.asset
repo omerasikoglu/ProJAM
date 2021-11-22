@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 363f0156041e5e74892b4eadbae32907, type: 3}
+  m_Name: InputData_Default
+  m_EditorClassIdentifier: 
+  mousePosition: {x: 0, y: 0, z: 0}
+  horizontalInput: 0
+  verticalInput: 0
+  mouseInputX: 0
+  mouseInputY: 0
+  isAttacking: 0
+  isJumping: 0
+  isHolding: 0
+  isDashing: 0
+  isBlocking: 0
+  isPressWeapon1Button: 0
+  isPressWeapon2Button: 0
+  isScrollingDown: 0
+  isScrollingUp: 0
+  isPressOpenMapButton: 0
+  isPressSpecialPowerButton: 0
+  isClickLeftMouseButton: 0
+  isClickRightMouseButton: 0
+  isReloading: 0
