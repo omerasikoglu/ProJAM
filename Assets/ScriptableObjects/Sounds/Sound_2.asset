@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5215c868651510043b168b3956f92f62, type: 3}
+  m_Name: Sound_2
+  m_EditorClassIdentifier: 
+  _soundName: Guitar - Tick
+  _soundAudioClip: {fileID: 8300000, guid: 189b825691d5da049be1abcd4dd4d795, type: 3}
+  _soundVolume: 0.1
+  _soundTimer: 0

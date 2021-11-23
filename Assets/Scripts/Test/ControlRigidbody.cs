@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ProJAM
+namespace ProJAM.Test
 {
     public class ControlRigidbody : MonoBehaviour
     {
