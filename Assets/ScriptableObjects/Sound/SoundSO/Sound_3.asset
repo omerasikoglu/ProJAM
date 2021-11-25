@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Sound_3
   m_EditorClassIdentifier: 
   _soundName: 
-  _soundAudioClip: {fileID: 0}
-  _soundVolume: 0
+  _soundAudioClip: {fileID: 8300000, guid: c772dfb5b1389d14781257fa2753c25b, type: 3}
+  _soundVolume: 0.3
   _soundTimer: 0

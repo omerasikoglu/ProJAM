@@ -4,11 +4,9 @@ using UnityEngine;
 
 namespace ProJAM.Sound
 {
-    [CreateAssetMenu(menuName = "Scriptable Objects/Data/Beat")]
+    [CreateAssetMenu(menuName = "Scriptable Objects/Sound/Data/Beat")]
     public class BeatManagerData : ScriptableObject
     {
-        [SerializeField] private float _BPM;
-        public float BPM { get { return _BPM; } }
 
         [Header("[Spectate]")]
         public bool isBeatFull; //static

@@ -7,7 +7,7 @@ namespace ProJAM.PlayerMovement
 {
     public class PlayerMovementController : MonoBehaviour
     {
-        [SerializeField] private PlayerMovementData _movementData;
+        [SerializeField] private PlayerMovementSettings _movementData;
         [SerializeField] private InputReceiverData _inputData;
         [SerializeField] private Rigidbody2D _rigidbody;
 

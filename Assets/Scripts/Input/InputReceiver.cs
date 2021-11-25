@@ -7,8 +7,7 @@ namespace ProJAM.PlayerInput
     public class InputReceiver : MonoBehaviour
     {
         [SerializeField] private InputReceiverData _inputData;
-
-        [SerializeField] private KeyCode attackButton;
+        [Space(20)] [SerializeField] private KeyCode attackButton;
         [SerializeField] private KeyCode jumpButton;
         [SerializeField] private KeyCode holdButton;
         [SerializeField] private KeyCode dashButton;

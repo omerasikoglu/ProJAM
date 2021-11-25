@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace ProJAM.PlayerMovement
 {
-    [CreateAssetMenu(menuName = "Scriptable Objects/Data/Movement")]
-    public class PlayerMovementData : ScriptableObject
+    [CreateAssetMenu(menuName = "Scriptable Objects/Movement/Settings/Movement")]
+    public class PlayerMovementSettings : ScriptableObject
     {
         [SerializeField] private float _movementSpeed;
         public float MovementSpeed { get { return _movementSpeed; } }

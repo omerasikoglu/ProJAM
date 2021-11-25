@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ProJAM.PlayerInput
 {
-    [CreateAssetMenu(menuName = "Scriptable Objects/Data/Input")]
+    [CreateAssetMenu(menuName = "Scriptable Objects/Input/Data")]
     public class InputReceiverData : ScriptableObject
     {
         public Vector3 mousePosition;
@@ -28,7 +28,7 @@ namespace ProJAM.PlayerInput
         public bool isClickLeftMouseButton;
         public bool isClickRightMouseButton;
         public bool isReloading;
-                                               
+
 
     }
 }

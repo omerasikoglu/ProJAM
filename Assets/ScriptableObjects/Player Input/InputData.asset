@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 363f0156041e5e74892b4eadbae32907, type: 3}
-  m_Name: InputData_Default
+  m_Name: InputData
   m_EditorClassIdentifier: 
   mousePosition: {x: 0, y: 0, z: 0}
   horizontalInput: 0

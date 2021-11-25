@@ -4,50 +4,49 @@ using UnityEngine;
 
 namespace ProJAM.Sound
 {
+    // PlaySoundOnBeat Manager
     public class SoundManager : MonoBehaviour
     {
-        [SerializeField] private int poolSize = 10;
-        private List<AudioSource> _soundClipPool;
+        [SerializeField] private SoundPool _soundPool;
+        [Space(20)] [SerializeField] private BeatManagerData _beatData;
+        [SerializeField] private SoundListSO _soundList;
 
-        private void Awake()
-        {
-            _soundClipPool = new List<AudioSource>();
-            for (int i = 0; i < poolSize; i++)
-            {
-                GameObject go = CreateGO();
-                _soundClipPool.Add(go.GetComponent<AudioSource>());
-            }
-        }
+        private int _randomStrum;
 
-        public void PlaySound(AudioClip clip, float volume)
+        //private List<SoundSO> soundList;
+        //private Dictionary<SoundSO, float> _soundTimerDictionary;
+        //private void Init()
+        //{
+        //    _soundTimerDictionary = new Dictionary<SoundSO, float>();
+
+        //    foreach (SoundSO sound in _soundList)
+        //    {
+        //        _soundTimerDictionary.Add(sound, sound.SoundTimer);
+        //    }
+        //}
+        private void Update()
         {
-            //pool'da çalmayan bi tanesini bulur ve verilerini deðiþtirir; bulamazsa yeni GO oluþturur
-            for (int i = 0; i < _soundClipPool.Count; i++)
+            if (_beatData.isBeatFull)
             {
-                if (!_soundClipPool[i].isPlaying)
+                _soundPool.PlaySound(_soundList.Tap.SoundAudioClip, _soundList.Tap.SoundVolume);   //0.5f
+                if (_beatData.beatCountFull % 2 == 0)
                 {
-                    _soundClipPool[i].clip = clip;
-                    _soundClipPool[i].volume = volume;
-                    _soundClipPool[i].Play();
-                    return;
+                    _randomStrum = UnityEngine.Random.Range(0, _soundList.StrumList.Count);
                 }
             }
 
-            GameObject go = CreateGO();
-            go.GetComponent<AudioSource>().clip = clip;
-            go.GetComponent<AudioSource>().volume = volume;
-            go.GetComponent<AudioSource>().Play();
-            _soundClipPool.Add(go.GetComponent<AudioSource>());
+            if (_beatData.isBeatD8 && _beatData.beatCountD8 % 2 == 0)
+            {
+                _soundPool.PlaySound(_soundList.Tick.SoundAudioClip, _soundList.Tick.SoundVolume); //0.1f
+            }
+            if (_beatData.isBeatD8 && (_beatData.beatCountD8 % 8 == 2 || _beatData.beatCountD8 % 8 == 4))
+            {
+                if (_soundList.StrumList[_randomStrum] != null)
+                {
+                    _soundPool.PlaySound(_soundList.StrumList[_randomStrum].SoundAudioClip, _soundList.StrumList[_randomStrum].SoundVolume);
+                }
+            }
 
         }
-
-        private GameObject CreateGO()
-        {
-            GameObject go = new GameObject("soundClip");
-            go.AddComponent<AudioSource>();
-            go.transform.parent = this.transform;
-            return go;
-        }
-
     }
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ProJAM.Camera
 {
-    [CreateAssetMenu(menuName = "Scriptable Objects/Data/Camera")]
+    [CreateAssetMenu(menuName = "Scriptable Objects/Camera/Settings/Camera")]
     public class CameraControllerData : ScriptableObject
     {
 

@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace ProJAM.Sound
 {
-    [CreateAssetMenu(menuName = "Scriptable Objects/Sound")]
-    public class Sound : ScriptableObject
+    [CreateAssetMenu(menuName = "Scriptable Objects/Sound/SoundSO", order = -2)]
+    public class SoundSO : ScriptableObject
     {
         [SerializeField] private string _soundName;
         [SerializeField] private AudioClip _soundAudioClip;

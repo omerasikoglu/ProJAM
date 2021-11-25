@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f744dad4a562424393393f1b38795b0, type: 3}
-  m_Name: MovementData_Default
+  m_Script: {fileID: 11500000, guid: 4c75c9ba61dbd5842acf75a7c48136a8, type: 3}
+  m_Name: BeatSettings_30BPM
   m_EditorClassIdentifier: 
-  _movementSpeed: 5
+  _BPM: 30

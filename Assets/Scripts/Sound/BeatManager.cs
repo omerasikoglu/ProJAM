@@ -8,6 +8,7 @@ namespace ProJAM.Sound
     public class BeatManager : MonoBehaviour
     {
         [SerializeField] private BeatManagerData _beatData;
+        [SerializeField] private BeatManagerSettings _beatSettings;
 
         private void Awake()
         {
@@ -32,7 +33,7 @@ namespace ProJAM.Sound
         {
             //full beat count
             _beatData.isBeatFull = false;
-            _beatData.beatInterval = 60 / _beatData.BPM;
+            _beatData.beatInterval = 60 / _beatSettings.BPM;
             _beatData.beatTimer += Time.deltaTime;
 
             if (_beatData.beatTimer >= _beatData.beatInterval)

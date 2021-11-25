@@ -5,7 +5,7 @@ namespace ProJAM.Camera
     public class CameraController : MonoBehaviour
     {
         [SerializeField] private CameraControllerData _cameraData;
-        [SerializeField] private Transform _targetTransform;
+        [Space(20)] [SerializeField] private Transform _targetTransform;
         [SerializeField] private Transform _cameraTransform;
 
         private void Update()
